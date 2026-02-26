@@ -15,6 +15,10 @@ connectToMongoDB("mongodb://127.0.0.1:27017/short-url").then(() =>
 
 //middlewares
 app.use(express.json());
+
+//Jo bhi routes urlRoute file me defined hain, un sab ke aage /url laga do.
+//"For any request that starts with /url, hand it over to urlRoute to handle — and strip the /url prefix before passing it."
+
 app.use("/url", urlRoute);
 
 app.get("/:shortId", async (req, res) => {
