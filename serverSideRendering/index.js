@@ -13,7 +13,7 @@ connectToMongoDB("mongodb://127.0.0.1:27017/short-url").then(() =>
   console.log("MongoDB connected"),
 );
 
-//middlewares
+//middlewares routing
 app.use(express.json());
 
 app.get("/test", async (req, res) => {
